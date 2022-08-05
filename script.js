@@ -6,9 +6,11 @@ window.addEventListener('scroll', () =>{
     
     /* final currentOpacity will be from 0-1 incrementing by 
     .1 depending on scroll position. */
-    currentOpacity  = -topElement.clientHeight - htmlElement.scrollTop - 200;
+    const fadeStartPosition = 80;
+    currentOpacity  = -topElement.clientHeight - htmlElement.scrollTop - fadeStartPosition;
     currentOpacity = currentOpacity / 100 * .25;
-    currentOpacity = Math.abs(currentOpacity) - 1;
+    currentOpacity = (Math.abs(currentOpacity) - 1);
+    
     
     
     if(currentOpacity < 1){
@@ -21,7 +23,7 @@ window.addEventListener('scroll', () =>{
         currentOpacity = 1;
         changeNav();
     }
-    
+    console.log(currentOpacity);
     topElement.style.backgroundColor = `hsla(30, 100%, 50%,${currentOpacity})`;
     
 
