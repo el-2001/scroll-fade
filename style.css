@@ -23,7 +23,7 @@ nav{
     border-top: black solid 2px;
     position: absolute;
     top: 0px;
-    transform: scaleY(-1);
+    
 }
 h2{
 margin-top: 600px;
